@@ -1,0 +1,19 @@
+.container {
+  height: 85vh;
+  width: 50vw;
+  background: rgba(69, 69, 69, 0.838);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ margin: 0 auto;
+}
+
+button{
+  width: 150px;
+  margin-top: 20px;
+}
+
+h3,
+h4 {
+  margin: 0 10px;
+}

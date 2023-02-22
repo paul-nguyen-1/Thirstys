@@ -4,6 +4,7 @@ import DiscoverList from "./components/DiscoverList";
 import Seen from "./components/Seen";
 import './App.css'
 
+
 function App() {
   return (
     <div className="App">

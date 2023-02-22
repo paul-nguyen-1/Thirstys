@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import "./Seen.css";
 
 function Seen() {
   return (
-    <div>Seen</div>
-  )
+    <div className="seenContainer">
+      <h3>Who have we seen so far?</h3>
+    </div>
+  );
 }
 
-export default Seen
+export default Seen;
