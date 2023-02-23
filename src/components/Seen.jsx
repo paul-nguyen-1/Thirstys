@@ -4,7 +4,7 @@ import "./Seen.css";
 function Seen() {
   return (
     <div className="seenContainer">
-      <h3>Who have we seen so far?</h3>
+      <h3>What have we seen so far?</h3>
     </div>
   );
 }

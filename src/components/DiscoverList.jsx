@@ -6,9 +6,9 @@ function DiscoverList() {
 
   return (
     <div className="container">
-      <h1>Art! Art! Art!</h1>
-      <h2>Discover the best art work from your wildest dreams.</h2>
-      <p>🎭🖼🎨🖌👨‍🎨👩‍🎨🧑‍🎨🎟</p>
+      <h1>Space! Space! Space!</h1>
+      <h2>Discover the best stars from your wildest dreams.</h2>
+      <p>🔭🪐☄️🛸👽🛰🚀👩‍🚀👾</p>
       <button>Discover! 🔀</button>
     </div>
   );

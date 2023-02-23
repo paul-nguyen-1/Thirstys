@@ -6,6 +6,7 @@ import './App.css'
 
 
 function App() {
+  const [submit, setSubmit] = useState("")
   return (
     <div className="App">
       <Seen />
