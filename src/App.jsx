@@ -15,28 +15,34 @@ function App() {
     makeQuery();
   };
 
-  //Query set up to call API
   const makeQuery = () => {
     let query = `${BASE_URL}${VITE_API_KEY}/random.php`;
     callAPI(query).catch(console.error);
   };
 
-  //Call API
   const callAPI = async (query) => {
     const response = await fetch(query);
     const json = await response.json();
     if (json.drinks == null) {
       alert("Oops! Something went wrong with that query, let's try again!");
     } else {
-      console.log(json.drinks[0].strDrinkThumb);
-      setCurrentImg(json.drinks[0].strDrinkThumb);
-      setAttributes({
-        strDrink: json.drinks[0].strDrink,
-        strCategory: json.drinks[0].strCategory,
-        strGlass: json.drinks[0].strGlass,
-        strIngredient1: json.drinks[0].strIngredient1,
-      });
-      setSeen((seen) => [...seen, json.drinks[0]]);
+      const drink = json.drinks[0];
+      const banned = banList.some((bannedAttribute) =>
+        Object.values(drink).includes(bannedAttribute)
+      );
+      if (banned) {
+        alert("This drink contains attributes from your banned attributes. Click and try again until a new drink comes up that meets your expectations.")
+      } else {
+        console.log(drink.strDrinkThumb);
+        setCurrentImg(drink.strDrinkThumb);
+        setAttributes({
+          strDrink: drink.strDrink,
+          strCategory: drink.strCategory,
+          strGlass: drink.strGlass,
+          strIngredient1: drink.strIngredient1,
+        });
+        setSeen((seen) => [...seen, drink]);
+      }
     }
   };
 
