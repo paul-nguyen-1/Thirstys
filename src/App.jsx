@@ -85,6 +85,7 @@ function App() {
         currentImg={currentImg}
         handleClick={handleClick}
         banAttribute={banAttribute}
+        banList={banList}
       />
       <div className="banContainer">
         <h3>Ban List</h3>
