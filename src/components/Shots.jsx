@@ -1,6 +1,6 @@
 import React from "react";
 
-function Shots({ attributes, currentImg, handleClick }) {
+function Shots({ attributes, currentImg, handleClick, banAttribute }) {
   return (
     <div className="discoverContainer">
       <h1>Shots! Shots! Shots!</h1>
@@ -11,7 +11,7 @@ function Shots({ attributes, currentImg, handleClick }) {
         {attributes &&
           Object.entries(attributes).map(([attribute, value], index) => (
             <div className="attributeButton" key={index}>
-              <button>{value}</button>
+              <button onClick={() => banAttribute(value)}>{value}</button>
             </div>
           ))}
       </div>
@@ -22,12 +22,12 @@ function Shots({ attributes, currentImg, handleClick }) {
           alt="Image of a Drink"
           style={{
             margin: "10px",
-            border: "2px solid  background-color: rgba(0, 0, 0, 0.815);",
+            border: "2px solid  background-color: rgba(0, 0, 0, 0.815)",
             borderRadius: "15px",
           }}
         />
       )}
-      <button onClick={handleClick}>Discover! 🔀</button>
+      <button onClick={handleClick} style={{marginBottom: "50px", marginTop:"10px"}}>Discover! 🔀</button>
     </div>
   );
 }
