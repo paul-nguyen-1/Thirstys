@@ -3,4 +3,5 @@
   width: 17.5vw;
   background-color: rgba(124, 124, 124, 0.698);
   overflow: hidden;
+  border-radius: 15px;
 }
