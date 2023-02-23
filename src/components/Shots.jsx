@@ -8,15 +8,13 @@ function Shots({ attributes, currentImg, handleClick, banAttribute, banList }) {
       <p>🍺🍻🍷🍸🍹🥂🥃🍶🍾</p>
       {attributes && <h2>Specialty Drink: {attributes.strDrink}</h2>}
       <div className="attributeContainer">
-  {attributes &&
-    Object.entries(attributes)
-      .filter(([attribute, value]) => !banList.includes(value))
-      .map(([attribute, value], index) => (
-        <div className="attributeButton" key={index}>
-          <button onClick={() => banAttribute(value)}>{value}</button>
-        </div>
-      ))}
-</div>
+        {attributes &&
+          Object.entries(attributes).map(([attribute, value], index) => (
+            <div className="attributeButton" key={index}>
+              <button onClick={() => banAttribute(value)}>{value}</button>
+            </div>
+          ))}
+      </div>
       {currentImg && (
         <img
           className="drinkImage"
@@ -29,7 +27,12 @@ function Shots({ attributes, currentImg, handleClick, banAttribute, banList }) {
           }}
         />
       )}
-      <button onClick={handleClick} style={{marginBottom: "50px", marginTop:"10px"}}>Discover! 🔀</button>
+      <button
+        onClick={handleClick}
+        style={{ marginBottom: "50px", marginTop: "10px" }}
+      >
+        Discover! 🔀
+      </button>
     </div>
   );
 }
