@@ -43,16 +43,17 @@ function App() {
     <div className="App">
       <div className="seenContainer">
         <h3>What have we seen so far?</h3>
-        <div className="drinkImage">
+        <div style={{marginTop: "10px"}}>
           {seen && seen.length > 0 ? (
             seen.map((seenDesc, index) => (
               <div key={index}>
-                <h4>{seenDesc.strDrink}</h4>
+                <h4>{index + 1}) {seenDesc.strDrink}</h4>
                 <img
                   className="seenImgs"
                   src={seenDesc.strDrinkThumb}
                   alt="Undefined screenshot from seen"
                   width="100"
+                  style={{margin: "10px" , border: "2px solid  background-color: rgba(0, 0, 0, 0.815);", borderRadius:"15px"}}
                 />
               </div>
             ))

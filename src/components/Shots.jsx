@@ -16,7 +16,16 @@ function Shots({ attributes, currentImg, handleClick }) {
           ))}
       </div>
       {currentImg && (
-        <img className="drinkImage" src={currentImg} alt="Image of a Drink" />
+        <img
+          className="drinkImage"
+          src={currentImg}
+          alt="Image of a Drink"
+          style={{
+            margin: "10px",
+            border: "2px solid  background-color: rgba(0, 0, 0, 0.815);",
+            borderRadius: "15px",
+          }}
+        />
       )}
       <button onClick={handleClick}>Discover! 🔀</button>
     </div>
