@@ -6,7 +6,7 @@ function App() {
   const BASE_URL = "https://www.thecocktaildb.com/api/json/v1/";
   const VITE_API_KEY = import.meta.env.VITE_API_KEY;
   const [attributes, setAttributes] = useState(null);
-  const [seenImgs, setSeenImgs] = useState([]);
+  const [seen, setSeen] = useState([]);
   const [currentImg, setCurrentImg] = useState(null);
 
   // Handle API Data on discover click
@@ -35,6 +35,7 @@ function App() {
         strGlass: json.drinks[0].strGlass,
         strIngredient1: json.drinks[0].strIngredient1,
       });
+      setSeen((seen) => [...seen, json.drinks[0]]);
     }
   };
 
@@ -42,6 +43,23 @@ function App() {
     <div className="App">
       <div className="seenContainer">
         <h3>What have we seen so far?</h3>
+        <div className="drinkImage">
+          {seen && seen.length > 0 ? (
+            seen.map((seenDesc, index) => (
+              <div key={index}>
+                <h4>{seenDesc.strDrink}</h4>
+                <img
+                  className="seenImgs"
+                  src={seenDesc.strDrinkThumb}
+                  alt="Undefined screenshot from seen"
+                  width="100"
+                />
+              </div>
+            ))
+          ) : (
+            <h3>We haven't seen any drinks yet!</h3>
+          )}
+        </div>
       </div>
       <Shots
         attributes={attributes}
