@@ -31,7 +31,7 @@ function App() {
         Object.values(drink).includes(bannedAttribute)
       );
       if (banned) {
-        alert("This drink contains attributes from your banned attributes. Click and try again until a new drink comes up that meets your expectations.")
+        makeQuery();
       } else {
         console.log(drink.strDrinkThumb);
         setCurrentImg(drink.strDrinkThumb);
