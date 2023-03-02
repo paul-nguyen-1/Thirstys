@@ -49,7 +49,7 @@ function App() {
   //Filter out attribute clicked and put it on ban list
   const banAttribute = (value) => {
     setBanList((banList) => [...banList, value]);
-    console.log({ value });
+    // console.log({ value });
   };
 
   // Remove attribute from ban list
