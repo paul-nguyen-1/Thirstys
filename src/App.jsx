@@ -48,7 +48,7 @@ function App() {
 
   //Filter out attribute clicked and put it on ban list
   const banAttribute = (value) => {
-    setBanList((banList) => [...banList, value]);
+    setBanList((banList) => [...new Set([...banList, value])])
     // console.log({ value });
   };
 
