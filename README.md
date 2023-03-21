@@ -1,14 +1,10 @@
-# Web Development Project 4 - Drinks Ahoy!
+# Drinks Ahoy!
 
-Submitted by: Paul Nguyen
 
-This web app: TheCockTailDB API Project
 
-Time spent: 10 hours spent in total
+## Features
 
-## Required Features
-
-The following **required** functionality is completed:
+The following functionality is completed:
 
 - [x] **Clicking a button creates a new API fetch request and displays at least three attributes from the returned JSON data**
 - [x] **Only one item/API call is viewable at a time**
@@ -16,15 +12,8 @@ The following **required** functionality is completed:
 - [x] **At least one image is displayed per API call**
 - [x] **Clicking on a displayed value for one attribute adds it to a displayed ban list**
 - [x] **Attributes on the ban list prevent further images/API results with that attribute from being displayed**
-
-The following **optional** features are implemented:
-
 - [x] Multiple types of attributes can be added to the ban list
 - [x] Users can see a stored history of their previously viewed items from their session
-
-The following **additional** features are implemented:
-
-* [x] List anything else that you added to improve the site's functionality!
 
 ## Video Walkthrough
 
@@ -32,12 +21,7 @@ Here's a walkthrough of implemented user stories:
 
 ![](webdemo.gif)
 
-<!-- Replace this with whatever GIF tool you used! -->
 GIF created with [Kap](https://getkap.co/) for macOS
-
-## Notes
-
-Describe any challenges encountered while building the app.
 
 ## License
 
