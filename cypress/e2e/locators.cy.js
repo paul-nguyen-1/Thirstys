@@ -1,6 +1,6 @@
 describe("Locator Tests", () => {
   beforeEach(() => {
-    cy.visit("http://localhost:5173/");
+    cy.visit("https://thirstys.vercel.app/");
   });
 
   it("should display the shots motto", () => {

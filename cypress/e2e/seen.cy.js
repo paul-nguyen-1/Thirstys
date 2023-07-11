@@ -1,7 +1,7 @@
 describe("Seen So Far", () => {
     it("displays seen drinks correctly", () => {
       // Visit the app
-      cy.visit("http://localhost:5173/");
+      cy.visit("https://thirstys.vercel.app/");
 
       // Click the "Discover!" button 3 times
       for (let i = 0; i < 3; i++) {

@@ -1,6 +1,6 @@
 describe("Ban first attribute", () => {
   it("should ban the first attribute from the ban list and then remove it after", () => {
-    cy.visit("http://localhost:5173/");
+    cy.visit("https://thirstys.vercel.app/");
     // Click on the Discover button
     cy.contains("Discover! 🔀").click();
 
