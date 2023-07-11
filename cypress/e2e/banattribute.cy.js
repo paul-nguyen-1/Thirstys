@@ -28,7 +28,7 @@ describe("Ban first attribute", () => {
 
 describe("Ban second attribute", () => {
   it("should ban the second attribute from the ban list and then remove the attribute after", () => {
-    cy.visit("http://localhost:5173/");
+    cy.visit("https://thirstys.vercel.app/");
 
     // Click on the Discover button
     cy.contains("Discover! 🔀").click();
@@ -57,7 +57,7 @@ describe("Ban second attribute", () => {
 
 describe("Ban third attribute", () => {
   it("should ban the third attribute from the ban list and then remove it after", () => {
-    cy.visit("http://localhost:5173/");
+    cy.visit("https://thirstys.vercel.app/");
 
     // Click on the Discover button
     cy.contains("Discover! 🔀").click();
@@ -86,7 +86,7 @@ describe("Ban third attribute", () => {
 
 describe("Ban fourth attribute", () => {
   it("should ban the fourth attribute from the ban list and then remove it after", () => {
-    cy.visit("http://localhost:5173/");
+    cy.visit("https://thirstys.vercel.app/");
 
     // Click on the Discover button
     cy.contains("Discover! 🔀").click();
